@@ -1,0 +1,11 @@
+C:\Users\rohit\Desktop\codingdojo_cSharp\weddingPlanner\bin\MCD\Debug\netcoreapp2.0\weddingPlanner.deps.json
+C:\Users\rohit\Desktop\codingdojo_cSharp\weddingPlanner\bin\MCD\Debug\netcoreapp2.0\weddingPlanner.runtimeconfig.json
+C:\Users\rohit\Desktop\codingdojo_cSharp\weddingPlanner\bin\MCD\Debug\netcoreapp2.0\weddingPlanner.runtimeconfig.dev.json
+C:\Users\rohit\Desktop\codingdojo_cSharp\weddingPlanner\bin\MCD\Debug\netcoreapp2.0\weddingPlanner.dll
+C:\Users\rohit\Desktop\codingdojo_cSharp\weddingPlanner\bin\MCD\Debug\netcoreapp2.0\weddingPlanner.pdb
+C:\Users\rohit\Desktop\codingdojo_cSharp\weddingPlanner\obj\MCD\Debug\netcoreapp2.0\weddingPlanner.csprojResolveAssemblyReference.cache
+C:\Users\rohit\Desktop\codingdojo_cSharp\weddingPlanner\obj\MCD\Debug\netcoreapp2.0\weddingPlanner.csproj.CoreCompileInputs.cache
+C:\Users\rohit\Desktop\codingdojo_cSharp\weddingPlanner\obj\MCD\Debug\netcoreapp2.0\weddingPlanner.AssemblyInfoInputs.cache
+C:\Users\rohit\Desktop\codingdojo_cSharp\weddingPlanner\obj\MCD\Debug\netcoreapp2.0\weddingPlanner.AssemblyInfo.cs
+C:\Users\rohit\Desktop\codingdojo_cSharp\weddingPlanner\obj\MCD\Debug\netcoreapp2.0\weddingPlanner.dll
+C:\Users\rohit\Desktop\codingdojo_cSharp\weddingPlanner\obj\MCD\Debug\netcoreapp2.0\weddingPlanner.pdb

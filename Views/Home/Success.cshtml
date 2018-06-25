@@ -1,0 +1,83 @@
+﻿@using weddingPlanner.Models
+@model Wedding
+
+@{
+    ViewData["Title"] = "Welcome to the Wedding Planner";
+}
+@if(ViewBag.id==null)
+{
+    <html>
+        <body>
+                <h1>Please login!</h1>
+                <form action="redirectlogin" method="GET">
+                <button type="submit" class="btn btn-submit">login/Register</button>
+                </form>
+        </body>
+    </html>
+}
+else
+{
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <meta charset="UTF-8">
+            <title>Home Page</title>
+            <link rel="stylesheet" type="text/css" href="~/css/mystyles.css">
+        </head>
+        <body>
+            
+            <h2>@ViewData["Title"] <span>@ViewData["Name"]</span></h2>
+            <h3>Plan Your Wedding</h3>
+
+            <form asp-action="AddWedding" asp-controller="Home" method="POST">
+                <table>
+                    <tr>
+                        <td>
+                            <label asp-for="wedderOne">Bride/Groom</label>
+                            <br/><br/>
+                        </td>
+                        <td>
+                            <span asp-validation-for="wedderOne"></span>
+                            <input asp-for="wedderOne">
+                            <br/><br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label asp-for="wedderTwo">Bride/Groom</label>
+                            <br/><br/>
+                        </td>
+                        <td>
+                            <span asp-validation-for="wedderTwo"></span>
+                            <input asp-for="wedderTwo">
+                            <br/><br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label asp-for="Address">Address</label>
+                            <br/><br/>
+                        </td>
+                        <td>
+                            <span asp-validation-for="Address"></span>
+                            <input asp-for="Address">
+                            <br/><br/>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>
+                            <label asp-for="wedddingDate">Date of Wedding</label>
+                            <br/><br/>
+                        </td>
+                        <td> 
+                            <span asp-validation-for="wedddingDate"></span>
+                            <input type="date" asp-for="wedddingDate">
+                            <br/><br/>
+                        </td>
+                    </tr>
+                </table>
+                <input type="submit" value="Create Wedding">
+            </form>
+        </body>
+    </html>
+}

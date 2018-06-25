@@ -1,0 +1,25 @@
+@using System.Linq
+@using weddingPlanner.Models
+@model Wedding
+@{
+    ViewData["Title"] = "Welcome to the Wedding Planner";
+}
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="~/css/mystyles.css">
+    </head>
+    <body>
+       <h1> <span>@ViewBag.Weds.wedderOne</span> and <span>@ViewBag.Weds.wedderTwo  Wedding </span></h1>
+        <h2>Date :  @ViewBag.Weds.wedddingDate.ToString("MMMM dd, yyyy")</h2>
+        
+        <h3>Guests: </h3> 
+                @foreach(var guests in ViewBag.what)
+                {
+                    <p>@guests.myUser.FirstName @guests.myUser.LastName</p>
+                }
+    </body>
+</html>

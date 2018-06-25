@@ -1,0 +1,64 @@
+@using System.Linq
+@using weddingPlanner.Models
+@model IEnumerable<weddingPlanner.Models.Wedding>
+@{
+    ViewData["Title"] = "Welcome to the Wedding Planner";
+}
+@{
+    var weddingList = ViewBag.Weddings  as IEnumerable<weddingPlanner.Models.Wedding>;
+}
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>Dashboard</title>
+        <link rel="stylesheet" type="text/css" href="~/css/mystyles.css">
+    </head>
+    <body>
+        <h1> List of Weddings</h1>
+        <table>
+            <tr>
+                <td>Wedding</td>
+                <td>Date</td>
+                <td>Number Of people</td>
+                <td>Action</td>
+            </tr>
+
+             @foreach(var wedding in weddingList)
+                {
+            <tr>
+                    <td>
+                        <form action="weddingdetails" method="POST">
+                        <input type="hidden" name="wedding_id" value="@wedding.Id"/>
+                        <button style="background: none; border: none; color: blue;">@wedding.wedderOne & @wedding.wedderTwo</button>
+                        </form>
+                    </td>
+                    <td>@wedding.wedddingDate.ToString("MMM dd yyyy")</td>
+                    <td>@wedding.guests.Count </td>
+                    <td>@if(wedding.UserId==ViewBag.id)
+                        {
+                            <form action="delete" method="POST">
+                            <input type="submit" value="Delete">
+                            <input type="hidden" name="wedding_id" value="@wedding.Id"/>
+                            </form>
+                        }
+                        else if(wedding.guests.Exists(x=>x.UserId == ViewBag.id))
+                        {
+                            <form action="unrsvp" method="POST">
+                            <input type="hidden" name="wedding_id" value="@wedding.Id"/>
+                            <input type="submit" value="UnRsvp">
+                            </form>
+                        }
+                        else{
+                            <form action="rsvp" method="POST">
+                            <input type="hidden" name="wedding_id" value="@wedding.Id"/>
+                             <input type="submit" value="Rsvp">
+                            </form>
+                        }
+                        </td>
+                
+            </tr>
+                }
+        </table>
+    </body>
+</html>

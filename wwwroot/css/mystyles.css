@@ -1,0 +1,22 @@
+h2{
+    color:plum;
+    display: inline-block;
+}
+
+span{
+    color:plum;
+    display:inline-block;
+}
+
+.logout{
+    color:palegreen;
+    margin-left:95%;
+    display:inline-block;
+}
+body {
+    margin: 0;
+}
+
+.navbar-nav{
+    background-color: plum;
+}
